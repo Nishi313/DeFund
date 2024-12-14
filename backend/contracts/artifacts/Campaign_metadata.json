@@ -1,0 +1,325 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_beneficiary",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_name",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_fundingGoal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint48",
+						"name": "_deadline",
+						"type": "uint48"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalFunds",
+						"type": "uint256"
+					}
+				],
+				"name": "CampaignFinalized",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "DonationMade",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "FundingGoalMet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "donor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "RefundIssued",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "beneficiary",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "deadline",
+				"outputs": [
+					{
+						"internalType": "uint48",
+						"name": "",
+						"type": "uint48"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "description",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "donate",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "finalizeCampaign",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fundingGoal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCampaignDetails",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "campaignBeneficiary",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "campaignName",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "string",
+						"name": "campaignDescription",
+						"type": "string"
+					},
+					{
+						"internalType": "uint48",
+						"name": "campaignDeadline",
+						"type": "uint48"
+					},
+					{
+						"internalType": "uint256",
+						"name": "campaignFundingGoal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "campaignTotalFunds",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "campaignIsActive",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDonors",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isActive",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalFunds",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "The smart contract for the created Campaign. It handles everything related to a specific Campaign that has been deployed",
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Creates the Campaign smart contract",
+					"params": {
+						"_beneficiary": "The wallet address of the beneficiary that is creating this Campaign",
+						"_deadline": "Timestamp of when the Campaign should be fully funded before it becomes inactive",
+						"_description": "The description of this Campaign",
+						"_fundingGoal": "Funding Goal for the Campaign in cryptocurrency (SepoliaETH)"
+					}
+				},
+				"donate()": {
+					"details": "Allows donors to donate to the CampaignTo be called from the frontend by the donor"
+				},
+				"finalizeCampaign()": {
+					"details": "Called when the Campaign's deadline has passed, and also handles the refund to all donors if the fundingGoal is not met by thenTo be called from the frontend by the beneficiary"
+				},
+				"getCampaignDetails()": {
+					"details": "Get all the Campaign details from its state variables"
+				},
+				"getDonors()": {
+					"details": "Get all the donors of this CampaignLikely to be used by the frontend to notify just donors on events such as FundsWithdrawn and CampaignFinalized"
+				}
+			},
+			"title": "Campaign",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"backend/contracts/Campaign.sol": "Campaign"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"backend/contracts/Campaign.sol": {
+			"keccak256": "0xdba74a899c3c9a97b3a6f24521b3c31f5f71de6af5ab455c2432e954f9ac0028",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6df7dbe08e8d77d59fe4502ce7d7805d4716e2a10fd87202dd91ec10a5c633df",
+				"dweb:/ipfs/QmQ4uk46uUganQz4KS6hTLLiP5BwpSkWBf2xbT2wzrMZo9"
+			]
+		}
+	},
+	"version": 1
+}
